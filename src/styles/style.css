@@ -5,21 +5,34 @@
 }
 
 body {
-  background-color:ivory;
-  font-family: sans-serif;
+  background-color: ivory;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
 }
 
 main {
   width: 90%;
   max-width: 800px;
   margin: 32px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
-club-list {
+.club-list {
   display: block;
   margin-top: 32px;
   width: 100%;
   padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.club-list h2 {
+  margin-bottom: 16px;
+  color: #4b2d13;
 }
 
 .footer {
@@ -29,12 +42,14 @@ club-list {
   justify-content: center;
   background-color: #EDDFB3;
   color: #4b2d13;
+  border-top: 2px solid #4b2d13;
 }
 
 marquee {
   font-size: small;
-  background-color:#4b2d13;
-  color:#ffffff;
+  background-color: #4b2d13;
+  color: #ffffff;
+  padding: 10px 0;
 }
 
 #myBtn {
@@ -46,13 +61,27 @@ marquee {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color:#4b2d13;
+  background-color: #4b2d13;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: #6a4c3a;
+  transform: translateY(-3px);
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  main {
+    width: 95%;
+  }
+
+  #myBtn {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
 }

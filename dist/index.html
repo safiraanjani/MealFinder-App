@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Safira's Meal Finder</title></head><body><button onclick="topFunction()" id="myBtn" title="Go to top">👆</button><header><app-bar></app-bar></header><marquee>Awas! Menu yang ada disini akan menimbulkan efek ketagihan dan pengin nambah terus :D</marquee><main><search-bar></search-bar><club-list></club-list></main><script>let mybutton = document.getElementById("myBtn");
+
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }</script><script src="bundle.js"></script></body><footer class="footer"><div class="copyright">&copy; Copyright <strong><span>Safira Anjani</span></strong>. All Rights Reserved</div></footer></html>

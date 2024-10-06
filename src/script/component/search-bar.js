@@ -1,8 +1,7 @@
 class SearchBar extends HTMLElement {
-
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({mode: 'open'});
+    this.shadowDOM = this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -14,14 +13,16 @@ class SearchBar extends HTMLElement {
     this.render();
   }
 
-
   get value() {
-    return this.shadowDOM.querySelector('#searchElement').value;
+    return this.shadowDOM.querySelector("#searchElement").value;
   }
 
   render() {
     this.shadowDOM.innerHTML = `
       <style>
+        p {
+          text-align: center;
+        }
         .search-container {
           max-width: 800px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -74,16 +75,19 @@ class SearchBar extends HTMLElement {
           }
         }
       </style>
-      
+    
+      <p>Masukkan kata kunci menggunakan Bahasa Inggris (contoh: beef, vegan, dst)</p>  
+
       <div id="search-container" class="search-container">
-        <input placeholder="Mau makan apa?" id="searchElement" type="search">
+      <input placeholder="Mau makan apa?" id="searchElement" type="search">
         <button id="searchButtonElement" type="submit">Cari Yuk!</button>
       </div>
     `;
 
-    this.shadowDOM.querySelector('#searchButtonElement')
-        .addEventListener('click', this._clickEvent);
+    this.shadowDOM
+      .querySelector("#searchButtonElement")
+      .addEventListener("click", this._clickEvent);
   }
 }
 
-customElements.define('search-bar', SearchBar);
+customElements.define("search-bar", SearchBar);
